@@ -10,6 +10,7 @@ pipeline {
             }
             steps{
                 sh 'echo hello'
+                sh 'cat Jenkinsfile'
                 script{
                     withSonarQubeEnv(credentialsId: 'sonar-key') {
                         sh 'chmod +x gradlew'
